@@ -12,7 +12,8 @@ checkButton.addEventListener('click', function () {
     return;
   }
 //const regex = /^\s*(?:[-+]?[0-9]+(?:\.[0-9]+)?(?:E[-+]?[0-9]+)?|[-+]?\.[0-9]+(?:e[-+]?[0-9]+)?)\s*(?:\*\s*10\^[0-9]+)?\s*$/;
-const regex = /^[+-]?\d*\.\d+(e[+-]?\d+)$/i;
+//const regex = /^[+-]?\d*\.\d+(e[+-]?\d+)$/i;
+const regex = /^[+-]?(\d+(\.\d*)?|\.\d+)(e[+-]?\d+)?$/i;  
   if (regex.test(number)) {
     result.textContent = `${number}  is a scientific number :)`;
     result.classList.remove('hidden');
